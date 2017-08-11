@@ -1,0 +1,25 @@
+{
+  "name": "react-affine",
+  "version": "0.0.1",
+  "description": "2D Transformation Framework For React",
+  "main": "react-affine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psharbau-cmu/react-affine.git"
+  },
+  "keywords": [
+    "React",
+    "2D",
+    "Game",
+    "Graphics"
+  ],
+  "author": "Patrick Sharbaugh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psharbau-cmu/react-affine/issues"
+  },
+  "homepage": "https://github.com/psharbau-cmu/react-affine#readme"
+}
