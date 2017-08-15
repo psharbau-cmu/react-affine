@@ -1,0 +1,15 @@
+{
+  "name": "create-react-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-affine": "file:../../react-affine-0.0.1.tgz",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}
