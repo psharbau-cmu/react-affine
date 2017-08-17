@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import affine from 'react-affine';
-
-let AfWin = affine.AfWin;
+// import affine from 'react-affine';
+// let AfWin = affine.AfWin;
+import AfWin from './AfWin';
 
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <AfWin />
-      </div>
-    );
+    return <AfWin style={{width:'100vw', height:'100vh', backgroundColor:'#39c'}}/>
   }
 }
 

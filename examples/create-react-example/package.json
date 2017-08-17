@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-affine": "file:../../react-affine-0.0.1.tgz",
+    "react-affine": "file:../../react-affine-0.0.2.tgz",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "root": "pushd ..\\.. && npm pack && popd && npm install ..\\..\\react-affine-0.0.2.tgz && npm start"
   }
 }

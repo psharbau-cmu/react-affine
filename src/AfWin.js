@@ -3,7 +3,7 @@ import React from 'react';
 class AfWin extends React.Component {
 
     render() {
-        return <div></div>;
+        return <h1 className="test">Albert</h1>;
     }
 }
 
