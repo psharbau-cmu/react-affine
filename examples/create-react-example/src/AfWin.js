@@ -1,47 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class AfWin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            clientWidth:100,
-            clientHeight:100
+            style:{position:'relative', display:'box', width:props.width + 'px', height:props.height + 'px'}
         };
-
-        this.onresize = this.onresize.bind(this);
-        this.element = false;
     }
 
-    onresize() {
-        if (!this.element) return;
-        let width = this.element.clientWidth;
-        let height = this.element.clientHeight;
-        console.log(width, height);
-        this.setState({clientWidth:width, clientHeight:height});
+    componetWillReceiveProps(props) {
+        this.setState({
+            style:{position:'relative', display:'box', width:props.width + 'px', height:props.height + 'px'}
+        });
     }
 
     render() {
-        return <div style={this.state.style}></div>
-    }
-
-    componentDidMount() {
-        this.element = ReactDOM.findDOMNode(this);
-        window.addEventListener('resize', this.onresize);
-        this.onresize();
-        this.componentWillReceiveProps(this.props);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.onresize);
-        this.element = false;
-    }
-
-    componentWillReceiveProps(nextProps) {
-        let nextStyle = nextProps.style || {};
-        nextStyle.position = 'relative';
-        this.setState({style: nextStyle});
+        console.log(this.state);
+        return (
+            <div style={this.state.style}>
+                {React.Children.map(this.props.children, child => React.cloneElement(child, {width:this.props.width / 2}))}
+            </div>
+        );
     }
 }
 
-export default AfWin;
+export default AfWin; 
